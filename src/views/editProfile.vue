@@ -1,6 +1,6 @@
 <template>
 	<div class="back">
-		<login-header middleContent="修改资料" @back="backUserInfo"></login-header>
+		<login-header middleContent="修改资料" ></login-header>
 		
 			<van-cell-group>
 			  <van-cell title="头像" @click="upload">
@@ -71,9 +71,7 @@
 				const {data: res} =await this.$http.get('/user/'+localStorage.getItem("id"))
 				this.model =res[0];
 			},
-			backUserInfo() {
-				history.back();
-			},
+			
 			upload() {
 				this.$refs.upAvatarRef.click();
 			},

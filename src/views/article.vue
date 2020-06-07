@@ -3,7 +3,8 @@
 		<!-- 获取用户头像数据；没有则默认头像 -->
 		<!-- <nav-bar 	:imgPath=""></nav-bar> -->
 		<nav-bar style="position:fixed;top:0;z-index:99;"></nav-bar>
-		<div style="margin-top: 45px;">
+		<div style="margin-top: 45px;position: relative;">
+			<van-icon name="arrow-left" id="backIcon" @click="backUserInfo()"></van-icon>
 			<div class="video" style="width:100%;">
 				<video :src="model[0].content" style="width:100%;height:100%" controls="controls"></video>
 			</div>
@@ -42,7 +43,7 @@
 				userInfo:{}
 			}
 		},
-		mounted() {
+		created() {
 			this.getData();
 		},
 		watch:{
@@ -51,7 +52,9 @@
 			}
 		},
 		methods:{
-			
+			backUserInfo() {
+				history.back();
+			},
 			//先要获取用户数据,根据localStorage，获取到用户id和头像
 			//mounted
 			async getData() {
@@ -70,6 +73,9 @@
 <style scoped lang="scss">
 	.back {
 		width:100%;height:100%;
+	}
+	#backIcon {
+		position: absolute;font-size:26px;width:30px;height:30px;color: white;top:0;z-index: 33;
 	}
 </style>
 

@@ -1,17 +1,17 @@
 <template>
 	<div class="top">
-		<van-popup v-model="selectVisiable" position="left" :style="{ width: '30%',height: '100%'}" >
+		<van-popup v-model="selectVisiable" position="left" :style="{ width: '30%',height: '100%'}" class="conTop">
 			<div style="width:100%;height:60px;text-align: center;line-height: 60px;background-color:  #ffadb4;color:white"
 					@click="$router.push('/user')"
 					>用户中心</div>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="eye-o" />我的关注</van-button>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="underway-o" />历史纪录</van-button>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="down" />离线缓存</van-button>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="star-o" />我的收藏</van-button>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="chat-o" />我的消息</van-button>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="balance-pay" />我的钱包</van-button>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="tv-o" />直播中心</van-button>
-					<van-button style="height:66px;margin:2px 5px 0;"><van-icon name="envelop-o" />稿件管理</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="eye-o" />我的关注</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="underway-o" />历史纪录</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="down" />离线缓存</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="star-o" />我的收藏</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="chat-o" />我的消息</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="balance-pay" />我的钱包</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="tv-o" />直播中心</van-button>
+					<van-button style="height:66px;margin:2px 3px 0;"><van-icon name="envelop-o" />稿件管理</van-button>
 			<van-button type="default" class="logoutBtn" @click="$router.push('/login')"
 					>退出登录</van-button>
 		</van-popup>
@@ -58,6 +58,7 @@
 		height:45px;width:100%;display:flex;background-color:white;
 		div {flex:1;align-items: center;}
 	}
+	.conTop{z-index:99;}
 	.left{
 		width:50px;height:100%;background-color: #ffadb4;margin-right:10px;text-align: center;line-height: 50px;color:white
 	}

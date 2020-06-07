@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="header">
-			<div @click="$emit('back')"><van-icon name="arrow-left" /></div>
+			<div @click="backUserInfo()"><van-icon name="arrow-left" /></div>
 			<div>{{middleContent}}</div>
 			<div><slot name="right"></slot></div>
 		</div>
@@ -10,7 +10,12 @@
 
 <script>
 	export default {
-		props:['middleContent']
+		props:['middleContent'],
+		methods:{
+			backUserInfo() {
+				history.back();
+			}
+		}
 	}
 </script>
 

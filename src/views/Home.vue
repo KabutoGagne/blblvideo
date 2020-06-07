@@ -1,7 +1,7 @@
 <template>
   <div class="home">
    <nav-bar style="position:fixed;top:0px;z-index:99"></nav-bar>
-	 <van-tabs v-model="active" swipeable sticky offset-top="45" style="margin-top: 45px;">
+	 <van-tabs v-model="active" swipeable sticky offset-top="45" style="margin-top: 45px;z-index: 90;">
 	   <van-tab :title="item.title" v-for="(item,index) in category" :key="index">
 			<van-list v-model="item.loading" :finished="item.finished" @load="onload()" finished-text="没有更多了">
 				<div style="display: flex;flex-wrap: wrap;align-content: stretch;">
@@ -86,6 +86,6 @@ export default {
 		width:100%;height:100%
 	}
 	.detailitem {
-		width:46%;
+		width:46%;margin:0 2% 8px;
 	}
 </style>
